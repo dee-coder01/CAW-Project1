@@ -1,6 +1,4 @@
 import { Page, expect } from "@playwright/test";
-import { selectors } from "../selectors/selectors";
-import { HtmlElements } from "../utils/constants";
 
 export class TestPage {
   private page: Page;
@@ -48,3 +46,15 @@ type DataSchema = {
   name: string;
   age: number;
 };
+
+export const selectors = {
+  table: '[id="tablehere"]',
+  input: '[id="jsondata"]',
+  refresh: '[id="refreshtable"]',
+};
+
+export enum HtmlElements {
+  summary = "summary",
+  tableRow = "tr",
+  tableData = "td",
+}
